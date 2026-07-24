@@ -3,9 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>Dark Files</title>
 </head>
 <body>
+    <!--Algemeen: veel donker, met accenten in het licht-->
     <header>
         <nav id="navbar">
             <ul>
@@ -20,49 +24,73 @@
         </nav>  
     </header>
    <main>
-        <hero id="hero">
-            <!--Het idee van een spotlight dat op de titel wordt geschenen, in het donker. Getypte letters. -->
+
+        <section id="hero">
+            <!--Het idee van een spotlight dat op de titel wordt geschenen, in het donker. Misschien licht van bovenaf.
+            Getypte letters. -->
+            <!--Wordt het een afbeelding? Of pure HTML/CSS code?-->
             <h1>Dark Files</h1>
             <p>Onopgeloste verdwijningen, vergeten dossiers en stemmen die niet meer willen zwijgen.
             </p>
-        </hero>
+        </section>
+
         <section id="stage">
+            <!--Prominent in beeld, groot venster voor de video.-->
             <h2>Uitgelicht Dossier</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.            
+            <p>Twintig jaar geleden stapte de 21-jarige Laura in de auto van een onbekende man. 
+                Haar familie en vrienden hebben sindsdien geen enkel teken van leven meer ontvangen. 
+                In dit dossier duiken we diep in de zaak, onderzoeken we de omstandigheden rondom haar verdwijning en 
+                proberen we de waarheid te achterhalen.            
             </p>
         </section>
+
         <section id="archives"> 
-             <!--Iets als een 'uitklapbaar overzicht' van dossiers, elk dossier een episode-->
+             <!--Een kort overzicht van dossiers, elk dossier een episode-->
+             <!--Elk dossier is een apart item, als een knop waar inleidende tekst wordt weergegeven + titel + thumbnail-->
+             <!--Drie items als voorbeeld-->
             <h2>Het Archief</h2>
+            <p>
+                Bekijk hier onze eerder uitgegeven dossiers. 
+            </p>
+            <section class="archive-item">
+                <h3 class="title-archive-item">Dossier 1: De Verdwijning van Anna</h3>
+                <p class="date-archive-item">Datum van publicatie: 15 juli 2025</p>
+                <p class="description-archive-item">In de zomer van 1985 speelde Anna, een tienermeisje uit een klein dorpje, op het schoolplein, toen een onbekende vrouw haar aansprak. Momenten daarna was het meisje in geen...</p>
+            </section>
+            <section class="archive-item">
+                <h3 class="title-archive-item">Dossier 2: Alibi's in het Bos</h3>
+                <p class="date-archive-item">Datum van publicatie: 01 juli 2025</p>
+                <p class="description-archive-item">Op 25 juli 2019 werd de tech-magnaat Albert Prins op zijn kantoor bezocht door twee onbekende mannen. Dezelfde dag werd hij als vermist opgegeven toen hij niet thuis was gekomen... </p> 
+            </section>
+            <section class="archive-item">
+                <h3 class="title-archive-item">Dossier 3: Het Mysterie van het Verdwenen Gezin</h3>
+                <p class="date-archive-item">Datum van publicatie: 17 juni 2025</p>
+                <p class="description-archive-item">Op 15 maart 2005 was Jan Klaver met zijn gezin op het vliegtuig gestapt om hun langgekoesterde wereldreis te starten vanaf New Delhi. Het gezin is nooit in het hotel aangekomen...</p>
+            </section>
         </section>
+
         <section id="host">
-            <!-- Het gevoel van een geopend dossier, met foto paperclip, getypte tekst -->
+            <!-- Het gevoel van een geopend dossier, met foto paperclip, getypte tekst alsof de host zelf
+             een zaak is. -->
             <h2>De onderzoeker</h2>
             <img src="images/host.jpg" alt="Onderzoeker">
-            <table>
-                <tr>
-                    <td>
-                        <h3>Naam</h3>
-                    </td>
-                    <td>
-                        <h3>: Oscar Verstraeten</h3>
-                    </td>
-                    <td>
-                        <h3>Leeftijd</h3>
-                    </td>
-                    <td>
-                        <h3>: 32</h3>   
-                    </td>   
-                    <td>
-                        <h3>Beroep</h3>
-                    </td>
-                    <td>
-                        <h3>: Misdaadjournalist, Onderzoeker</h3>
-                    </td>   
-                </tr>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.            
-            </p>
+            
+            <section class="host-details">
+                <p class="host-prop-name">Naam</p>
+                <p class="host-colon">:</p>
+                <p class="host-name-value">Oscar Verstraeten</p>
+                <p class="host-prop-age">Leeftijd</p>
+                <p class="host-colon">:</p>
+                <p class="host-age-value">32</p>
+                <p class="host-prop-occupation">Beroep</p>
+                <p class="host-colon">:</p>
+                <p class="host-occupation-value">Misdaadjournalist, Onderzoeker
+            </section>
+            <section class="host-info">
+                <p>Oscar Verstraeten is een ervaren misdaadjournalist en onderzoeker met een passie voor het ontrafelen van complexe zaken. Met meer dan tien jaar ervaring in het veld, heeft hij talloze dossiers onderzocht en onthult hij de verhalen die vaak verborgen blijven voor het grote publiek.</p>
+            </section> 
         </section>
+
         <section id="method">
             <h2>Onderzoek methode</h2>
             <!-- Een collage van tekst en afbeeldingen: dossiers, vingerafdruk, begeleidende tekst (parallax?)-->
@@ -70,11 +98,13 @@
             </p>
         </section>
         <section id="testimonials">
-            <!-- Quotes (parallax) als stemmen die niet meer willen zwijgen om beurten opdoemen-->
+            <!-- Quotes (parallax) als stemmen die niet meer willen zwijgen om beurten opdoemen in wit
+             in de duisternis (als rook)-->
             <h2>Getuigenissen</h2>
         </section>
         <section id="subscribe">
             <!-- Als een computerscherm met memo's, computerscherm zelf is het inschrijfformulier-->
+            <!-- Toch nog even goed over nadenken, niet helemaal in lijn met detectivebureau gevoel...?-->
             <h2>Nieuwsbrief</h2>    
         </section>
     </main>
