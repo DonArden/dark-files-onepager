@@ -1,0 +1,174 @@
+/* =========================
+   1. Custom properties
+========================= */
+
+:root {
+    --color-background: #0a0a0a;
+    --color-background-alt: #373535;
+    --color-surface: #615a5a;
+    --color-text: #e0e0e0eb;
+    --color-accent: #7c2821;
+
+    --navbar-height: 60px;
+}
+
+/* =========================
+   2. Reset / base
+========================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--navbar-height) + 2rem);
+    text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   3. Typography
+========================= */
+
+h1,
+h2,
+h3 {
+    font-family: 'Courier Prime', monospace;
+}
+
+p {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+a {
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.2rem;
+    color: var(--color-text);
+}
+
+#hero {
+    text-align: center;
+    padding: 2rem;
+
+}
+
+#hero-title {
+    font-family: 'Courier Prime', monospace;
+    font-size: 5rem;
+    font-weight: 100;
+}
+
+#hero-subtitle {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: 200;
+    letter-spacing: 80;
+    
+}
+
+/* =========================
+   4. Layout
+========================= */
+
+.container {
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    height: var(--navbar-height);
+    background-color: var(--color-background-alt);
+}
+
+#hero-title{
+    margin-top: 20vh;
+    margin-bottom: 1rem;
+}
+
+
+/* =========================
+   5. Header / navigation
+========================= */
+
+header {
+
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+#intro,
+#stage,
+#archives,
+#host,
+#method,
+#testimonials,
+#subscribe {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+section {
+     
+}
+
+/* =========================
+   6. Sections
+========================= */
+
+#hero {
+    background-image: url('images/hero_02_red-pump.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+#stage {
+}
+
+#archives {
+}
+
+#subscribe {
+ min-height: 85vh;
+  display: grid;
+  align-content: center;
+  padding: 6rem 1.5rem;
+}
+/* =========================
+   7. Footer
+========================= */
+
+footer {
+}
