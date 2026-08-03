@@ -6,7 +6,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style_01.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Dark Files</title>
 </head>
 <body>
@@ -21,7 +22,7 @@
                 <li class="nav-item"><a href="#host">De onderzoeker</a></li>
                 <li class="nav-item"><a href="#method">Onderzoek methode</a></li>
                 <li class="nav-item"><a href="#testimonials">Getuigenissen</a></li>
-                <li><a href="#subscribe">Nieuwsbrief</a></li>
+                <li class="nav-item"><a href="#subscribe">Nieuwsbrief</a></li>
             </ul>
         </nav>  
     </header>
@@ -32,107 +33,143 @@
             Getypte letters. -->
             <!--Wordt het een afbeelding? Of pure HTML/CSS code?-->
             <!--<img src="images/hero_02.png" alt="Hero Image" id="hero-image">-->
-            <h1 id="hero-title">Dark Files</h1>
-            <p id="hero-subtitle">Onopgeloste verdwijningen, vergeten dossiers en stemmen die niet meer willen zwijgen.
-            </p>
+            <div id="hero-content">
+                <h1 id="hero-title">Dark Files</h1>
+                <p id="hero-subtitle">Onopgeloste verdwijningen, vergeten dossiers en stemmen die niet meer willen zwijgen.
+                </p>
+            </div>
         </section>
 
-        <section id="intro">
+        <section id="intro" class="section">
             <!--Een korte introductie van de podcast -->
-            <h2>Welkom bij Dark Files</h2>
-            <p>Dark Files is een meeslepende podcast die zich richt op onopgeloste verdwijningen en vergeten dossiers. 
-                Onze host, Oscar Verstraeten, neemt je mee op een reis door de duistere wereld van misdaad en mysterie, 
-                waarbij hij diep graaft in de verhalen die vaak verborgen blijven voor het grote publiek.
-            </p>
+            <h2 class="section-title reveal">Welkom bij Dark Files</h2>
+            <div class="section-content reveal-content">
+                <img src="images/intro_image.png" alt="Introductie afbeelding" class="intro-image">
+                <p>Dark Files is een meeslepende podcast die zich richt op onopgeloste verdwijningen en vergeten dossiers. 
+                    Onze host, Oscar Verstraeten, neemt je mee op een reis door de duistere wereld van misdaad en mysterie, 
+                    waarbij hij diep graaft in de verhalen die vaak verborgen blijven voor het grote publiek.
+                </p>
+            </div>
         </section>
 
-        <section id="stage">
+        <section id="stage" class="section">
             <!--Prominent in beeld, groot venster voor de video.-->
-            <h2>Uitgelicht Dossier</h2>
-            <p>Twintig jaar geleden stapte de 21-jarige Laura in de auto van een onbekende man. 
-                Haar familie en vrienden hebben sindsdien geen enkel teken van leven meer ontvangen. 
-                In dit dossier duiken we diep in de zaak, onderzoeken we de omstandigheden rondom haar verdwijning en 
-                proberen we de waarheid te achterhalen.            
-            </p>
+            <h2 class = "section-title reveal">Uitgelicht Dossier</h2>
+            <div class="section-content reveal-content">
+                <p>Twintig jaar geleden stapte de 21-jarige Laura in de auto van een onbekende man. 
+                    Haar familie en vrienden hebben sindsdien geen enkel teken van leven meer ontvangen. 
+                    In dit dossier duiken we diep in de zaak, onderzoeken we de omstandigheden rondom haar verdwijning en 
+                    proberen we de waarheid te achterhalen.            
+                </p>
+            </div>
         </section>
 
-        <section id="archives"> 
+        <section id="archives" class="section"> 
              <!--Een kort overzicht van dossiers, elk dossier een episode-->
              <!--Elk dossier is een apart item, als een knop waar inleidende tekst wordt weergegeven + titel + thumbnail-->
              <!--Drie items als voorbeeld-->
-            <h2>Het Archief</h2>
-            <p>
-                Bekijk hier onze eerder uitgegeven dossiers. 
-            </p>
-            <section class="archive-item">
-                <h3 class="title-archive-item">Dossier 1: De Verdwijning van Anna</h3>
-                <p class="date-archive-item">Datum van publicatie: 15 juli 2025</p>
-                <p class="description-archive-item">In de zomer van 1985 speelde Anna, een tienermeisje uit een klein dorpje, op het schoolplein, toen een onbekende vrouw haar aansprak. Momenten daarna was het meisje in geen...</p>
-            </section>
-            <section class="archive-item">
-                <h3 class="title-archive-item">Dossier 2: Alibi's in het Bos</h3>
-                <p class="date-archive-item">Datum van publicatie: 01 juli 2025</p>
-                <p class="description-archive-item">Op 25 juli 2019 werd de tech-magnaat Albert Prins op zijn kantoor bezocht door twee onbekende mannen. Dezelfde dag werd hij als vermist opgegeven toen hij niet thuis was gekomen... </p> 
-            </section>
-            <section class="archive-item">
-                <h3 class="title-archive-item">Dossier 3: Het Mysterie van het Verdwenen Gezin</h3>
-                <p class="date-archive-item">Datum van publicatie: 17 juni 2025</p>
-                <p class="description-archive-item">Op 15 maart 2005 was Jan Klaver met zijn gezin op het vliegtuig gestapt om hun langgekoesterde wereldreis te starten vanaf New Delhi. Het gezin is nooit in het hotel aangekomen...</p>
-            </section>
+            <h2 class="section-title reveal">Het Archief</h2>
+            <div class="section-content reveal-content">
+                <img src="images/archive_image.png" alt="Archief afbeelding" class="archive-image">
+                <p>
+                    Bekijk hier onze eerder uitgegeven dossiers. 
+                </p>
+                <section class="archive-item">
+                    <h3 class="title-archive-item">Dossier 1: De Verdwijning van Anna</h3>
+                    <p class="date-archive-item">Datum van publicatie: 15 juli 2025</p>
+                    <p class="description-archive-item">In de zomer van 1985 speelde Anna, een tienermeisje uit een klein dorpje, op het schoolplein, toen een onbekende vrouw haar aansprak. Momenten daarna was het meisje in geen...
+                </section>
+                <section class="archive-item">
+                    <h3 class="title-archive-item">Dossier 2: Alibi's in het Bos</h3>
+                    <p class="date-archive-item">Datum van publicatie: 01 juli 2025</p>
+                    <p class="description-archive-item">Op 25 juli 2019 werd de tech-magnaat Albert Prins op zijn kantoor bezocht door twee onbekende mannen. Dezelfde dag werd hij als vermist opgegeven toen hij niet thuis was gekomen... </p> 
+                </section>
+                <section class="archive-item">
+                    <h3 class="title-archive-item">Dossier 3: Het Mysterie van het Verdwenen Gezin</h3>
+                    <p class="date-archive-item">Datum van publicatie: 17 juni 2025</p>
+                    <p class="description-archive-item">Op 15 maart 2005 was Jan Klaver met zijn gezin op het vliegtuig gestapt om hun langgekoesterde wereldreis te starten vanaf New Delhi. Het gezin is nooit in het hotel aangekomen...</p>
+                </section>
+            </div>
         </section>
 
-        <section id="host">
+        <section id="host" class="section">
             <!-- Het gevoel van een geopend dossier, met foto paperclip, getypte tekst alsof de host zelf
              een zaak is. -->
-            <h2>De onderzoekers</h2>
-            <section id="host-01">
-                <img src="images/host_01.png" alt="Foto van één van de hosts, Oscar Verstraeten" class="host-image">
+            <h2 class="section-title reveal">De onderzoekers</h2>
+            <div class="section-content reveal-content">
+                <p>Maak kennis met onze toegewijde onderzoekers, Oscar Verstraeten en Angelique Sneijders. 
+                    Met hun jarenlange ervaring in misdaadjournalistiek en onderzoek, brengen zij de verhalen van de vergeten dossiers tot leven. 
+                    Hun passie voor het ontrafelen van complexe zaken en het onthullen van de waarheid drijft hen om diep te graven in elk dossier dat ze onderzoeken.
+                </p>
+                <section id="host-01">
+                    <img src="images/host_01.png" alt="Foto van één van de hosts, Oscar Verstraeten" class="host-image">
             
-                <section class="host-details">
-                    <p class="host-prop">Naam</p>
-                    <p class="host-colon">:</p>
-                    <p class="host-value">Oscar Verstraeten</p>
-                    <p class="host-prop">Beroep</p>
-                    <p class="host-colon">:</p>
-                     <p class="host-value">Misdaadjournalist, Onderzoeker</p>
+                    <section class="host-details">
+                        <p class="host-prop">Naam</p>
+                        <p class="host-colon">:</p>
+                        <p class="host-value">Oscar Verstraeten</p>
+                        <p class="host-prop">Beroep</p>
+                        <p class="host-colon">:</p>
+                        <p class="host-value">Misdaadjournalist, Onderzoeker</p>
+                    </section>
+                    <section class="host-info">
+                        <p>Oscar Verstraeten is een ervaren misdaadjournalist en onderzoeker met een passie voor het ontrafelen van complexe zaken. Met meer dan tien jaar ervaring in het veld, heeft hij talloze dossiers onderzocht en onthult hij de verhalen die vaak verborgen blijven voor het grote publiek.</p>
+                    </section> 
                 </section>
-                <section class="host-info">
-                    <p>Oscar Verstraeten is een ervaren misdaadjournalist en onderzoeker met een passie voor het ontrafelen van complexe zaken. Met meer dan tien jaar ervaring in het veld, heeft hij talloze dossiers onderzocht en onthult hij de verhalen die vaak verborgen blijven voor het grote publiek.</p>
-                </section> 
-            </section>
-            <section id="host-02">
-                <img src="images/host_02.png" alt="Foto van één van de hosts, Maria Jansen" class="host-image">
+                <section id="host-02">
+                    <img src="images/host_02.png" alt="Foto van één van de hosts, Maria Jansen" class="host-image">
             
-                <section class="host-details">
-                    <p class="host-prop">Naam</p>
-                    <p class="host-colon">:</p>
-                    <p class="host-value">Angelique Sneijders</p>
-                    <p class="host-prop">Beroep</p>
-                    <p class="host-colon">:</p>
-                     <p class="host-value">Misdaadjournalist, Onderzoeker</p>
+                    <section class="host-details">
+                        <p class="host-prop">Naam</p>
+                        <p class="host-colon">:</p>
+                        <p class="host-value">Angelique Sneijders</p>
+                        <p class="host-prop">Beroep</p>
+                        <p class="host-colon">:</p>
+                        <p class="host-value">Misdaadjournalist, Onderzoeker</p>
+                    </section>
+                    <section class="host-info">
+                        <p>Angelique Sneijders is een ervaren misdaadjournalist en onderzoeker met een passie voor het ontrafelen van complexe zaken. Met meer dan tien jaar ervaring in het veld, heeft zij talloze dossiers onderzocht en onthult zij de verhalen die vaak verborgen blijven voor het grote publiek.</p>
+                    </section> 
                 </section>
-                <section class="host-info">
-                    <p>Angelique Sneijders is een ervaren misdaadjournalist en onderzoeker met een passie voor het ontrafelen van complexe zaken. Met meer dan tien jaar ervaring in het veld, heeft zij talloze dossiers onderzocht en onthult zij de verhalen die vaak verborgen blijven voor het grote publiek.</p>
-                </section> 
-            </section>
+            </div>
 
         </section>
 
-        <section id="method">
-            <h2>Onderzoek methode</h2>
-            <!-- Een collage van tekst en afbeeldingen: dossiers, vingerafdruk, begeleidende tekst (parallax?)-->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.            
-            </p>
+        <section id="method" class="section">
+            <h2 class="section-title reveal">Onderzoek methode</h2>
+            <div class="section-content reveal-content">
+                <p>Onze onderzoeksmethode is gebaseerd op grondig onderzoek, interviews en het analyseren van beschikbare gegevens. We combineren traditionele journalistieke technieken met moderne technologieën om de waarheid achter elk dossier te onthullen. Onze onderzoekers werken nauw samen met experts en betrokkenen om een volledig beeld te krijgen van de zaak.</p>
+                <!-- Een collage van tekst en afbeeldingen: dossiers, vingerafdruk, begeleidende tekst (parallax?)-->
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.            
+                </p>
+            </div>
         </section>
-        <section id="testimonials">
+        <section id="testimonials" class="section">
             <!-- Quotes (parallax) als stemmen die niet meer willen zwijgen om beurten opdoemen in wit
              in de duisternis (als rook)-->
-            <h2>Getuigenissen</h2>
+            <h2 class="section-title reveal">Getuigenissen</h2>
+            <div class="section-content reveal-content">
+                <p>Onze luisteraars delen hun ervaringen en inzichten over de dossiers die we onderzoeken. Hun getuigenissen bieden waardevolle perspectieven en helpen ons om een dieper begrip te krijgen van de zaken die we behandelen.</p>
+                <blockquote class="testimonial">
+                    <p>"De podcast heeft me echt aan het denken gezet over de complexiteit van onopgeloste zaken. Het is fascinerend om te horen hoe diepgaand het onderzoek is." - Luisteraar A</p>
+                </blockquote>
+                <blockquote class="testimonial">
+                    <p>"Ik waardeer de manier waarop de onderzoekers elk dossier benaderen met respect en zorgvuldigheid. Het is duidelijk dat ze gepassioneerd zijn over hun werk." - Luisteraar B</p>
+                </blockquote>
+            </div>
         </section>
-        <section id="subscribe">
+        <section id="subscribe" class="section">
             <!-- Als een computerscherm met memo's, computerscherm zelf is het inschrijfformulier-->
             <!-- Toch nog even goed over nadenken, niet helemaal in lijn met detectivebureau gevoel...?-->
-            <h2>Nieuwsbrief</h2>    
+            <h2 class="section-title reveal">Nieuwsbrief</h2>   
+            <div class="section-content reveal-content">
+                <p>Blijf op de hoogte van onze nieuwste dossiers en exclusieve content door je in te schrijven voor onze nieuwsbrief. Ontvang updates rechtstreeks in je inbox en mis geen enkel detail van de verhalen die we onderzoeken.</p>
+                <form id="subscribe-form">
+                    <label for="email">E-mailadres:</label>
+                    <input type="email" id="email" name="email" required>
+                    <button type="submit">Inschrijven</button>
+                </form> 
+            </div>
         </section>
     </main>
     <footer>

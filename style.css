@@ -56,7 +56,7 @@ a {
 
 a {
     color: var(--color-text);
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 /* =========================
@@ -84,25 +84,56 @@ a {
     top: 0;
     left: 0;
     width: 100%;
+
+    transform: translateY(-100%);
+    animation: lower-navbar 0.75s ease-out 4s forwards;
+}
+@keyframes lower-navbar {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 #nav-list {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
 
-    height: var(--navbar-height);
+    min-height: var(--navbar-height);
     margin: 0;
-    padding: 1rem 2rem;
+    padding: 0;
 
     background-color: var(--color-background-alt);
     list-style: none;
 }
 
-#nav-list li {
-    list-style: none;
+.nav-item {
+    display: flex;
 }
+
+.nav-item a {
+    display: flex;
+    align-items: center;
+
+    padding-inline: 2rem;
+    white-space: nowrap;
+
+    transition:
+        background-color 0.5s ease-in-out,
+        color 0.5s ease-in-out;
+}
+
+.nav-item a:hover,
+.nav-item a:focus-visible {
+    background-color: var(--color-accent);
+    color: var(--color-background);
+}
+
 
 /* =========================
    6. Hero
@@ -112,7 +143,19 @@ a {
     min-height: 100vh;
     padding: 2rem;
 
-    background-image: url('images/hero_02_red-pump.png');
+    display: grid;
+    place-items: center;
+
+    background-image: linear-gradient(
+                        to bottom, 
+                        transparent 25%,
+                        rgb(10 10 10/ 0.25)50%, 
+                        rgb(10 10 10/ 0.35)70%, 
+                        rgb(10 10 10/ 0.7)88%,
+                       var(--color-background) 98%
+                        ), 
+                    url('images/hero_02_red-pump.png');
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -120,9 +163,57 @@ a {
     text-align: center;
 }
 
+#hero-content h1,
+#hero-content p {
+    opacity: 0;
+    transform: translateY(1.5rem);
+}
+
+#hero-content h1 {
+    animation: reveal-title 1.2s ease-out  0.5s forwards;
+}
+#hero-content p {
+    animation: reveal-subtitle 1.2s ease-out 1.5s forwards;
+}
+
+@keyframes reveal-title {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+    filter: blur(0.25rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes reveal-subtitle {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#hero-content {
+    display: grid;
+    gap: 0.75rem;
+    text-align: center;
+
+    transform: translateY(-18vh);
+}
+
 #hero-title {
-    margin-top: 20vh;
-    margin-bottom: 1rem;
+    /*margin-top: -20vh;
+    margin-bottom: 1rem;*/
+    margin: 0;
 
     font-family: 'Courier Prime', monospace;
     font-size: 5rem;
@@ -130,15 +221,57 @@ a {
 }
 
 #hero-subtitle {
+    margin: 0;
+
     font-family: 'IBM Plex Sans', sans-serif;
     font-size: 1.2rem;
     font-weight: 200;
     line-height: 1.5;
     letter-spacing: 0.08em;
+
+}
+/* =========================
+   7. Sections - general
+========================= */    
+
+h2.section-title {
+    font-family: 'Courier Prime', monospace;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    opacity: 0;
+    transform: translateY(2rem);
+
+    transition:
+        opacity 0.8s ease-out,
+        transform 0.8s ease-out;
+}
+
+.section-title.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section {
+    padding: 6rem 1.5rem;
+    min-height: 85vh;
+    display: grid;
+    align-content: justify;
+}
+
+.reveal-content.is-visible {
+    opacity: 1;
+    
+    transition:
+        opacity 8s ease-out .6s,
 }
 
 /* =========================
-   7. Subscribe
+   . Subscribe
 ========================= */
 
 #subscribe {
