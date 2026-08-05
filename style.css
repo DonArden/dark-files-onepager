@@ -291,7 +291,27 @@ main > section {
 #hero-cta-button:focus-visible {
     background-color: var(--color-accent);
     font-weight: 600;
-    transform: translateY(0) scale(1.08);
+}
+/*nieuwe shit*/
+#hero-cta-button span {
+    display: inline-block;
+    transition: transform 0.25s ease-in-out;
+}
+
+#hero-cta-button:hover span,
+#hero-cta-button:focus-visible span {
+    transform: scale(1.1);
+}
+@keyframes reveal-cta {
+    from {
+        opacity: 0;
+        transform: translateY(1rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* =========================
