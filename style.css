@@ -8,6 +8,7 @@
     --color-surface: #615a5a;
     --color-text: #e0e0e0eb;
     --color-accent: #7c2821;
+    --color-accent2: rgb(114, 38, 33);
 
     --navbar-height: 60px;
 }
@@ -82,7 +83,7 @@ main {
 
 main > section {
     width: 100%;
-    max-width: 80%;
+    /*max-width: 80%;*/
     margin-inline: auto;
 }
 /* =========================
@@ -97,7 +98,7 @@ main > section {
     width: 100%;
 
     transform: translateY(-100%);
-    animation: lower-navbar 0.75s ease-out 4s forwards;
+    animation: lower-navbar 0.75s ease-out 3s forwards;
 }
 @keyframes lower-navbar {
   from {
@@ -113,7 +114,7 @@ main > section {
     display: flex;
     flex-direction: row;
     align-items: stretch;
-    justify-content: space-between;
+    justify-content: space-around;
 
     min-height: var(--navbar-height);
     margin: 0;
@@ -124,14 +125,20 @@ main > section {
 }
 
 .nav-item {
+    flex: 1 1 0;
     display: flex;
 }
 
 .nav-item a {
+    flex: 1;
+
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    padding-inline: 2rem;
+    padding: 1rem;
+    text-align: center;
+    /*padding-inline: 2rem;*/
     white-space: nowrap;
 
     transition:
@@ -142,7 +149,8 @@ main > section {
 .nav-item a:hover,
 .nav-item a:focus-visible {
     background-color: var(--color-accent);
-    color: var(--color-background);
+    /*color: var(--color-background);*/
+    font-weight: 600;
 }
 
 
@@ -151,6 +159,7 @@ main > section {
 ========================= */
 
 #hero {
+    position: relative;
     min-height: 100vh;
     padding: 2rem;
 
@@ -241,6 +250,50 @@ main > section {
     letter-spacing: 0.08em;
 
 }
+
+#hero-cta-button {
+    position: absolute;
+    left: clamp(1.5rem, 5vw, 5rem);
+    bottom: clamp(3rem, 8vh, 7rem);
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.9rem 1.6rem;
+
+    font-family: 'Courier Prime', monospace;
+    font-size: 1.2rem;
+    font-weight: 400;
+
+    color: var(--color-text);
+    background-color: var(--color-accent2);
+    border: none;
+    border-radius: 0.25rem;
+
+    cursor: pointer;
+}
+
+
+#hero-cta-button {
+    opacity: 0;
+    transform: translateY(1rem);
+
+    animation: reveal-cta 0.8s ease-out 2.8s forwards;
+
+    transition:
+        transform 0.8s ease-in-out,
+        background-color 0.25s ease-in-out,
+        font-weight 0.25s ease-in-out;
+}
+
+#hero-cta-button:hover,
+#hero-cta-button:focus-visible {
+    background-color: var(--color-accent);
+    font-weight: 600;
+    transform: translateY(0) scale(1.08);
+}
+
 /* =========================
    7. Sections - general
 ========================= */    
@@ -255,10 +308,10 @@ h2.section-title {
 
 .section-title {
     opacity: 0;
-    transform: translateY(4rem);
+    transform: translateY(8rem);
 
     transition:
-        opacity 0.8s ease-out,
+        opacity 2s ease-out,
         transform 0.8s ease-out;
 }
 
@@ -302,7 +355,7 @@ section .section {
     min-height: 85vh;
     display: flex;
     flex-direction: column;
-    padding: 6rem 1.5rem;
+    padding: 0rem 1.5rem;
 }
 #intro-content {
     display: flex;
@@ -326,7 +379,7 @@ video {
 .intro-video-wrapper {
 
     /*width: min(80%, 60rem);*/
-    flex: 2;
+    flex: 1.5;
 
     margin-inline: auto;
     aspect-ratio: 16/9;
@@ -349,7 +402,7 @@ video {
    . Subscribe
 ========================= */
 
-#subscribe {
+#cta {
     min-height: 85vh;
     display: grid;
     align-content: center;
