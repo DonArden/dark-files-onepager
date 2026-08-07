@@ -13,6 +13,9 @@
 <body>
     <!--Algemeen: veel donker, met accenten in het licht-->
     <header>
+        <!-- navbar moet vooral helder en functioneel zijn -->
+        <!-- op het moment zijn de knoppen evenredig verdeeld over de breedte van het scherm, 
+         misschien is een logo links in de navbar mooier dan "Top"; dat 'breekt' de symmetrie-->
         <nav id="navbar">
             <ul id="nav-list">
                 <li class="nav-item"><a href="#hero">Top</a></li>
@@ -27,10 +30,11 @@
    <main>
     
         <section id="hero">
-           
-            <!--Wordt het een afbeelding? Of pure HTML/CSS code?-->
-            <!--<img src="images/hero_02.png" alt="Hero Image" id="hero-image">-->
-            <!-- Voeg een CTA toe, een knop die meteen naar de CTA leidt-->
+            
+            <!-- Moet gelijk sfeer neerzetten, duister, mysterieus en iets tragisch-->
+            <!-- De verloren rode pump is iconisch, die houden we erin -->
+            <!-- Een optie voor geluid aan/uit-->
+            <!-- Bij geluid aan => de pagina herlaadt zich, één van de bumpers klinkt -->
             <div id="hero-content">
                 <h1 id="hero-title">Dark Files</h1>
                 <p id="hero-subtitle">Onopgeloste verdwijningen, vergeten dossiers en stemmen die niet meer willen zwijgen.
@@ -43,11 +47,18 @@
         </section>
 
         <section id="intro" class="section">
-            <!--Een korte introductie van de podcast, hier hoeft nog geen video — sterke sfeermakers zijn wel essentieel -->
+            <!-- Een korte introductie van de podcast. Sterke tekst. -->
+            <!-- Intro-audio is aan 'video' gekoppeld. -->
+            <!-- Een animatie schuift horizontaal onderlangs voorbij S.O.S. in morse code of 
+             misschien het H.E.L.P. signaal, met streepjes en puntjes -->
             <h2 class="section-title ">Welkom bij Dark Files</h2>
             <div id="intro-content" class="section-content reveal-content">
-                <p id="intro-text-wrapper">Dark Files is een meeslepende ‘true crime’ podcast, die zich richt op onopgeloste verdwijningen en vergeten dossiers. 
-                   <br><br>Onze hosts, Oscar Verstraeten en Angelique Sneijders, nemen je mee op een reis door de duistere wereld van misdaad en mysterie.
+                <p id="intro-text-wrapper">Dark Files is een meeslepende ‘true crime’ podcast, 
+                    die zich richt op onopgeloste verdwijningen en vergeten dossiers. 
+                   <br><br>Oscar Verstraeten, een ervaren misdaadjournalist, en de cold case rechercheur Angelique Sneijders, 
+                   duiken diep in een duistere wereld van geheimen, leugens en verborgen waarheden en proberen aan de hand
+                   van politierapporten, getuigenverklaringen en persoonlijke verhalen de onderste steen boven te halen.
+
                 </p>
                 <div class="intro-video-wrapper">
                     <video 
@@ -63,7 +74,21 @@
         </section>
 
         <section id="stage" class="section">
-            <!--Prominent in beeld, groot venster voor de video. Belangrijkste sectie; vanwege het fragment. -->
+            <!-- Prominent in beeld, groot venster voor de video. Poster voor de video is een foto van 
+            de rode pump met een duistere filter eroverheen en een fictieve titel van de aflevering-->
+            <!-- Belangrijkste sectie; hier komt de kern samen webdesign/tekst-verhaal/audio => sfeer!! -->
+            <!-- Audio fragment moet bevatten, een compilatie van fragmenten uit de podcast zelf, 
+            waarbij originele audio op de achtergrond wordt gebruikt.-->
+            <!-- Animatie, maar parallax (achtergrond, tekst, video 
+             en animatie van morse van boven naar beneden(!! onthouden!!)). 
+             Op een grauwe duistere achtergrond met ruis, komt de video helder aanwezig omhoog
+             als er gescrollt wordt. 
+             Bij geen scroll hangt de video wel in de duisternis,
+             maar het moet aanvoelen als een object in de onbekende leegte (misschien shadow/blur effect).
+             De video is een compilatie van fragmenten uit de podcast zelf, 
+             waarbij originele audio op de achtergrond wordt gebruikt.
+             Misschien citaten uit de podcast die omhoog komen zweven (parallax effect) 
+             en verdwijnen in mist => translateY + blur + fade in en out-->
             <h2 class = "section-title ">Uitgelicht Dossier</h2>
             <div class="section-content reveal-content">
                 <p>Twintig jaar geleden stapte de 21-jarige Laura in de auto van een onbekende man. 
@@ -75,15 +100,15 @@
         </section>
 
         <section id="archives" class="section"> 
-             <!--Een kort overzicht van dossiers, elk dossier een episode-->
-             <!--Elk dossier is een apart item, als een knop waar inleidende tekst wordt weergegeven + titel + thumbnail-->
-             <!--Drie items als voorbeeld-->
-             <!--Elke knop leidt naar: CTA luister via Spotify, etc.-->
+             <!--Een kort overzicht van dossiers, elk dossier een episode, doemen net als de Hero
+             op uit de duisternis(?)na elkaar — slechts één keer en blijven dan zichtbaar -->
+             <!--Elk dossier is een apart item, werkt als een knop waar inleidende tekst op wordt 
+             weergegeven + titel + thumbnail-->
+             <!--Elke knop leidt naar: CTA luister nu via Spotify, etc.-->
             <h2 class="section-title ">Het Archief</h2>
             <div class="section-content reveal-content">
                 <img src="images/archive_image.png" alt="Archief afbeelding" class="archive-image">
-                <p>
-                    Bekijk hier onze eerder uitgegeven dossiers. 
+                <p>Beluister hier onze eerder uitgegeven dossiers. 
                 </p>
                 <section class="archive-item">
                     <h3 class="title-archive-item">Dossier 1: De Verdwijning van Anna</h3>
@@ -102,77 +127,12 @@
                 </section>
             </div>
         </section>
-<!-- WEG: Het gevoel van een geopend dossier, met foto paperclip, getypte tekst alsof de host zelf
-             een zaak is.
-        
-        <section id="host" class="section">    
-            
-            <h2 class="section-title ">De onderzoekers</h2>
-            <div class="section-content reveal-content">
-                <p>Maak kennis met onze toegewijde onderzoekers, Oscar Verstraeten en Angelique Sneijders. 
-                    Met hun jarenlange ervaring in misdaadjournalistiek en onderzoek, brengen zij de verhalen van de vergeten dossiers tot leven. 
-                    Hun passie voor het ontrafelen van complexe zaken en het onthullen van de waarheid drijft hen om diep te graven in elk dossier dat ze onderzoeken.
-                </p>
-                <section id="host-01">
-                    <img src="images/host_01.png" alt="Foto van één van de hosts, Oscar Verstraeten" class="host-image">
-            
-                    <section class="host-details">
-                        <p class="host-prop">Naam</p>
-                        <p class="host-colon">:</p>
-                        <p class="host-value">Oscar Verstraeten</p>
-                        <p class="host-prop">Beroep</p>
-                        <p class="host-colon">:</p>
-                        <p class="host-value">Misdaadjournalist, Onderzoeker</p>
-                    </section>
-                    <section class="host-info">
-                        <p>Oscar Verstraeten is een ervaren misdaadjournalist en onderzoeker met een passie voor het ontrafelen van complexe zaken. Met meer dan tien jaar ervaring in het veld, heeft hij talloze dossiers onderzocht en onthult hij de verhalen die vaak verborgen blijven voor het grote publiek.</p>
-                    </section> 
-                </section>
-                <section id="host-02">
-                    <img src="images/host_02.png" alt="Foto van één van de hosts, Angelique Sneijders" class="host-image">
-            
-                    <section class="host-details">
-                        <p class="host-prop">Naam</p>
-                        <p class="host-colon">:</p>
-                        <p class="host-value">Angelique Sneijders</p>
-                        <p class="host-prop">Beroep</p>
-                        <p class="host-colon">:</p>
-                        <p class="host-value">Misdaadjournalist, Onderzoeker</p>
-                    </section>
-                    <section class="host-info">
-                        <p>Angelique Sneijders is een ervaren misdaadjournalist en onderzoeker met een passie voor het ontrafelen van complexe zaken. Met meer dan tien jaar ervaring in het veld, heeft zij talloze dossiers onderzocht en onthult zij de verhalen die vaak verborgen blijven voor het grote publiek.</p>
-                    </section> 
-                </section>
-            </div>
 
-        </section>-->
-
-<!-- WEG: Een collage van tekst en afbeeldingen: dossiers, vingerafdruk, begeleidende tekst (parallax?)
-
-        <section id="method" class="section">
-            <h2 class="section-title ">Onderzoek methode</h2>
-            <div class="section-content reveal-content">
-                <p>Onze onderzoeksmethode is gebaseerd op grondig onderzoek, interviews en het analyseren van beschikbare gegevens. We combineren traditionele journalistieke technieken met moderne technologieën om de waarheid achter elk dossier te onthullen. Onze onderzoekers werken nauw samen met experts en betrokkenen om een volledig beeld te krijgen van de zaak.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.            
-                </p>
-            </div>
-        </section> -->
-<!-- WEG: Getuigenissen van luisteraars, als quotes in parallax, die opduiken in de duisternis. Alleen als effect toepassen!!
-        <section id="testimonials" class="section">
-            <h2 class="section-title ">Getuigenissen</h2>
-            <div class="section-content reveal-content">
-                <p>Onze luisteraars delen hun ervaringen en inzichten over de dossiers die we onderzoeken. Hun getuigenissen bieden waardevolle perspectieven en helpen ons om een dieper begrip te krijgen van de zaken die we behandelen.</p>
-                <blockquote class="testimonial">
-                    <p>"De podcast heeft me echt aan het denken gezet over de complexiteit van onopgeloste zaken. Het is fascinerend om te horen hoe diepgaand het onderzoek is." - Luisteraar A</p>
-                </blockquote>
-                <blockquote class="testimonial">
-                    <p>"Ik waardeer de manier waarop de onderzoekers elk dossier benaderen met respect en zorgvuldigheid. Het is duidelijk dat ze gepassioneerd zijn over hun werk." - Luisteraar B</p>
-                </blockquote>
-            </div>
-        </section>-->
         <section id="cta" class="section">
             <!-- CTA: Beluister nu, met een knop die naar Spotify, Apple Podcasts, etc. leidt. -->
             <!-- Toch nog even goed over nadenken, niet helemaal in lijn met detectivebureau gevoel...?-->
+            <!-- De animatie van morse van boven naar beneden(!! onthouden!!)) komt hier terug, 
+             van boven, alsof het de bezoeker hierheen wilde leiden-->
             <h2 class="section-title ">Beluister nu</h2>   
             <div class="section-content reveal-content">
                 <p>Klaar om de diepte in te duiken? Luister nu op Spotify, Apple Podcasts of je favoriete platform.</p>
