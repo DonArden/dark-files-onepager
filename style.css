@@ -398,8 +398,8 @@ section .section {
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    justify-content: left;
+    align-items: center;
+    /*justify-content: left;*/
 
     background-color: none;
 }
@@ -424,10 +424,10 @@ section .section {
 @keyframes line-descend {
   0% {
     opacity: 0;
-    transform: translateY(-80rem);
+    transform: translateY(0rem);
   }
 
-  25% {
+ /* 25% {
     opacity: 1;
     transform: translateY(-40rem);
   }
@@ -435,11 +435,11 @@ section .section {
   75% {
     opacity: 1;
     transform: translateY(40rem);
-  }
+  }*/
 
   100% {
     opacity: 0;
-    transform: translateY(80rem);
+    transform: translateY(40rem);
   }
 }
 
