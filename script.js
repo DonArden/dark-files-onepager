@@ -42,3 +42,24 @@ const titleObserver = new IntersectionObserver(
 sectionTitles.forEach((title) => {
     titleObserver.observe(title);
 });
+
+/*--- Voeg een animatie toe aan de morse-code-elementen wanneer de intro-sectie in beeld komt ---*/
+const morse = document.querySelector(".morse-help");
+
+const morseObserver = new IntersectionObserver(
+    (entries, observer) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) 
+                return;
+            
+
+                morse.classList.add("is-visible");
+                observer.unobserve(entry.target);
+        });
+    },
+    {
+        threshold: 0.2
+    }
+);
+
+morseObserver.observe(document.querySelector("#intro"));
