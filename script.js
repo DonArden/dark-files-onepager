@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
 });
 
 /*--- Voeg een animatie toe aan de sectietitels wanneer ze in beeld komen ---*/
-const sectionTitles = document.querySelectorAll(".section-title");
+const sectionTitles = document.querySelectorAll(".section-title:not(.stage-title)");
 
 const titleObserver = new IntersectionObserver(
     (entries, observer) => {
@@ -67,3 +67,25 @@ const morseObserver = new IntersectionObserver(
 );
 
 morseObserver.observe(document.querySelector("#intro"));
+
+/*--- Voeg een animatie toe aan de titel van Uitgelicht Dossier wanneer deze sectie in beeld komt ---*/
+const fileTitle = document.querySelector(".stage-title");
+
+const fileTitleObserver = new IntersectionObserver(
+    (entries, observer) => {
+        entries.forEach((entry) => {
+            if(!entry.isIntersecting)
+                return;
+
+            fileTitle.classList.add("is-visible");
+            observer.unobserve(entry.target);
+
+        })
+
+    },
+    {
+        threshold: 0.2
+    }
+);
+
+fileTitleObserver.observe(document.querySelector("#stage"));

@@ -34,6 +34,7 @@ html {
 }
 
 body {
+    position: relative;
     min-height: 100vh;
     margin: 0;
 
@@ -41,6 +42,24 @@ body {
     color: var(--color-text);
 
     font-family: 'IBM Plex Sans', sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at 95% 70%,
+            rgba(124, 40, 33, 0.32) 0%,
+            rgba(70, 24, 22, 0.20) 22%,
+            rgba(25, 14, 14, 0.10) 42%,
+            transparent 68%
+        );
+
+    pointer-events: none;
+    z-index: -1;
 }
 
 a {
@@ -64,6 +83,22 @@ a {
 a {
     color: var(--color-text);
     font-size: 1rem;
+}
+
+.project-disclaimer {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.25rem;
+    z-index: 900;
+
+    max-width: 18rem;
+    margin: 0;
+
+    font-size: 0.75rem;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+
+    color: rgba(224, 224, 224, 0.55);
 }
 
 /* =========================
@@ -91,7 +126,6 @@ main {
 
 main > section {
     width: 100%;
-    /*max-width: 80%;*/
     margin-inline: auto;
 }
 /* =========================
@@ -155,7 +189,6 @@ main > section {
 
     padding: 1rem;
     text-align: center;
-    /*padding-inline: 2rem;*/
     white-space: nowrap;
 
     transition:
@@ -166,7 +199,6 @@ main > section {
 .nav-item a:hover,
 .nav-item a:focus-visible {
     background-color: var(--color-accent);
-    /*color: var(--color-background);*/
     font-weight: 600;
 }
 
@@ -179,7 +211,6 @@ main > section {
 
 #hero {
     position: relative;
-    isolation: isolate;
 
     min-height: 100vh;
     padding: 2rem;
@@ -206,58 +237,6 @@ main > section {
     text-align: center;
 }
 
-.hero-shadow {
-    position: relative;
-    z-index: 0;
-
-    height: 20rem;
-    margin-top: -6rem;
-    margin-bottom: -10rem;
-
-     background:
-        linear-gradient(
-            to bottom,
-            rgba(10, 10, 10, 1) 0%,
-            rgba(10, 10, 10, 0.85) 35%,
-            rgba(10, 10, 10, 0.45) 70%,
-            transparent 100%
-        );
-
-    
-    pointer-events: none;
-}
-
-/*#hero::after {
-    content: "";
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: -8rem;
-
-    height: 30rem;
-
-    background:
-    linear-gradient(
-        to bottom,
-        var(--color-background) 0%,
-        var(--color-background) 0%,
-        green 50%,
-        transparent 100%
-    );
-
-    z-index: 0;
-    pointer-events: none;
-}*/
-
-
-#hero-content h1,
-#hero-content p {
-    position: relative;
-    z-index: 1;
-    opacity: 0;
-    transform: translateY(1.5rem);
-}
 
 #hero-content h1 {
     animation: reveal-title 1.2s ease-out  0.5s forwards;
@@ -301,8 +280,6 @@ main > section {
 }
 
 #hero-title {
-    /*margin-top: -20vh;
-    margin-bottom: 1rem;*/
     margin: 0;
 
     font-family: 'Courier Prime', monospace;
@@ -362,7 +339,7 @@ main > section {
     background-color: var(--color-accent);
     font-weight: 600;
 }
-/*nieuwe shit*/
+
 #hero-cta-button span {
     display: inline-block;
     transition: transform 0.25s ease-in-out;
@@ -396,7 +373,7 @@ h2.section-title {
     margin-bottom: 2rem;
 }
 
-.section-title {
+.section-title:not(.stage-title) {
     opacity: 0;
     transform: translateY(8rem);
 
@@ -405,7 +382,7 @@ h2.section-title {
         transform 0.8s ease-out;
 }
 
-.section-title.is-visible {
+.section-title:not(.stage-title).is-visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -440,18 +417,11 @@ section .section {
 }
 /* =========================
 
-   . Intro
+   8 Intro
 
 ========================= */
 #intro-scene    {
     position: relative;
-
-    background:
-        radial-gradient(
-            circle at 100% 45%,
-            rgba(124, 40, 33, 0.3),
-            transparent 45%
-        );
 }
 
 .intro-border   {
@@ -464,9 +434,6 @@ section .section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /*justify-content: left;*/
-
-    background-color: none;
 }
 
 .line {
@@ -491,16 +458,6 @@ section .section {
     opacity: 0.75;
     transform: translateY(-100rem);
   }
-
- /* 25% {
-    opacity: 1;
-    transform: translateY(-40rem);
-  }
-
-  75% {
-    opacity: 1;
-    transform: translateY(40rem);
-  }*/
   
   100% {
     opacity: 1;
@@ -512,7 +469,6 @@ section .section {
 
 
 .morse-help {
-    /*border: 1px solid var(--color-accent);*/
     opacity: 0;
     position: absolute;
     top:-20rem;
@@ -522,9 +478,6 @@ section .section {
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    justify-content: left;
-
-    background-color: none;
 }
 
 .morse-help.is-visible {
@@ -541,15 +494,6 @@ section .section {
     opacity: 1;
     
   }
-  /*25% {
-    opacity: 1;
-    transform: translateY(-20rem);
-  }
-
-  75% {
-    opacity: 1;
-    transform: translateY(20rem);
-  }*/
   99% {
     opacity: 1;
    
@@ -616,8 +560,6 @@ section .section {
 
     transition:
         border-left 0.5s ease-in-out;
-
-    /*border-left: 1px solid var(--color-accent);*/
 }
 #intro-content {
     display: flex;
@@ -636,20 +578,13 @@ video {
     display: block;
     width: 100%;
     height: auto;
-    /*object-fit: cover;*/
 }
 .intro-video-wrapper {
 
-    /*width: min(80%, 60rem);*/
     flex: 3;
 
     margin-inline: auto;
     aspect-ratio: 16/9;
-    
-    /*position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;*/
 }
 
 .intro-video {
@@ -660,6 +595,34 @@ video {
 
     background-color: var(--color-background-alt);
 }
+
+/* =========================
+
+    9 Stage
+
+========================= */
+
+.section-title .stage-title {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+
+    animation: type-title 2s steps(19,end) forwards;
+}
+
+@keyframes type-title   {
+    from {
+        width: 0;
+    }
+    to {
+        width: 19ch;
+    }
+}
+.section-title.stage-title.is-visible {
+    animation: type-title 2s steps(19,end) forwards;
+    opacity:1;
+}
+
 
 
 /* =========================
