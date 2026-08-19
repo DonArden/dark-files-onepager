@@ -239,10 +239,10 @@ main > section {
 
 
 #hero-content h1 {
-    animation: reveal-title 1.2s ease-out  0.5s forwards;
+    animation: reveal-title 1.2s ease-out  0.5s both;
 }
 #hero-content p {
-    animation: reveal-subtitle 1.2s ease-out 1.5s forwards;
+    animation: reveal-subtitle 1.2s ease-out 1.5s both;
 }
 
 @keyframes reveal-title {
@@ -285,6 +285,7 @@ main > section {
     font-family: 'Courier Prime', monospace;
     font-size: 5rem;
     font-weight: 400;
+    text-align: left;
 }
 
 #hero-subtitle {
@@ -424,7 +425,12 @@ section .section {
     position: relative;
 }
 
-.intro-border   {
+.section-trail,
+.morse-help {
+    pointer-events: none;
+}
+
+.section-trail   {
     opacity: 0;
     position: absolute;
     top:-20rem;
@@ -449,7 +455,7 @@ section .section {
     background-color: var(--color-accent);
 }
 
-.intro-border.is-visible {
+.section-trail.is-visible {
     animation: line-descend 5s linear 0s forwards;
 }
 
@@ -602,7 +608,7 @@ video {
 
 ========================= */
 
-.section-title .stage-title {
+.section-title.stage-title {
     width: 0;
     overflow: hidden;
     white-space: nowrap;

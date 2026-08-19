@@ -45,7 +45,7 @@ sectionTitles.forEach((title) => {
 
 /*--- Voeg een animatie toe aan de morse-code-elementen wanneer de intro-sectie in beeld komt ---*/
 const morse = document.querySelector(".morse-help");
-const introBorder = document.querySelector(".intro-border");
+const sectionTrail = document.querySelector(".section-trail");
 
 const morseObserver = new IntersectionObserver(
     (entries, observer) => {
@@ -55,7 +55,7 @@ const morseObserver = new IntersectionObserver(
             
 
                 morse.classList.add("is-visible");
-                introBorder.classList.add("is-visible"); /*hiervoor: zelf toegevoegd*/
+                sectionTrail.classList.add("is-visible"); /*hiervoor: zelf toegevoegd*/
                 observer.unobserve(entry.target);
    
                 
@@ -77,7 +77,16 @@ const fileTitleObserver = new IntersectionObserver(
             if(!entry.isIntersecting)
                 return;
 
+            const content = fileTitle.nextElementSibling;
+
             fileTitle.classList.add("is-visible");
+
+            if(content){
+                setTimeout(() => {
+                    content.classList.add("is-visible");
+                
+                }, 2000);
+            }
             observer.unobserve(entry.target);
 
         })
