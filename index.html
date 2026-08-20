@@ -3,22 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+
     <title>Dark Files</title>
 </head>
+
 <body>
-    <p class="project-disclaimer">Disclaimer: Dark Files is een fictief podcastconcept, ontwikkeld als portfolio-project voor 
+
+    <p class="project-disclaimer">
+        Disclaimer: Dark Files is een fictief podcastconcept, ontwikkeld als portfolio-project voor 
         webdesign, storytelling en originele audio.
     </p>
+
     <!--Algemeen: veel donker, met accenten in het licht-->
+
     <header>
         <!-- navbar moet vooral helder en functioneel zijn -->
         <!-- op het moment zijn de knoppen evenredig verdeeld over de breedte van het scherm, 
          misschien is een logo links in de navbar mooier dan "Top"; dat 'breekt' de symmetrie-->
+
         <nav id="navbar">
             <div id="nav-inner">
                 <ul id="nav-list">
@@ -29,185 +38,295 @@
                     <li class="nav-item"><a href="#cta">Beluister nu</a></li>
                 </ul>
             </div>
-        </nav>  
+        </nav>
     </header>
+
     <main>
-    
+
         <section id="hero">
-            
+
             <!-- Moet gelijk sfeer neerzetten, duister, mysterieus en iets tragisch-->
             <!-- De verloren rode pump is iconisch, die houden we erin -->
             <!-- Een optie voor geluid aan/uit-->
             <!-- Bij geluid aan => de pagina herlaadt zich, één van de bumpers klinkt -->
+
             <div id="hero-content">
                 <h1 id="hero-title">Dark Files</h1>
-                <p id="hero-subtitle">Onopgeloste verdwijningen, vergeten dossiers en stemmen die niet meer willen zwijgen.
+
+                <p id="hero-subtitle">
+                    Onopgeloste verdwijningen, vergeten dossiers en stemmen die niet meer willen zwijgen.
                 </p>
-                
             </div>
+
             <a href="#cta" id="hero-cta-button">
                 <span>Luister nu</span>
             </a>
+
         </section>
 
 
-        <section id="intro-scene">
+        <section id="intro-scene" class="morse-scene">
+
             <div class="section-trail">
                 <div class="line"></div>
             </div>
 
             <div class="morse-help">
+
                 <div class="morse-h">
                     <div class="dot"></div>
                     <div class="dot"></div>
                     <div class="dot"></div>
                     <div class="dot"></div>
-                </div>  
+                </div>
+
                 <div class="morse-e">
                     <div class="dot"></div>
                 </div>
+
                 <div class="morse-l">
                     <div class="dot"></div>
                     <div class="dash"></div>
                     <div class="dot"></div>
                     <div class="dot"></div>
-                </div>  
+                </div>
+
                 <div class="morse-p">
                     <div class="dot"></div>
                     <div class="dash"></div>
                     <div class="dash"></div>
                     <div class="dot"></div>
                 </div>
+
             </div>
 
             <section id="intro" class="section">
+
                 <!-- Een korte introductie van de podcast. Sterke tekst. -->
                 <!-- Intro-audio is aan 'video' gekoppeld. -->
                 <!-- Een animatie schuift horizontaal onderlangs voorbij S.O.S. in morse code of 
                 misschien het H.E.L.P. signaal, met streepjes en puntjes -->
-                <h2 class="section-title ">Welkom bij Dark Files</h2>
+
+                <h2 class="section-title">Welkom bij Dark Files</h2>
+
                 <div id="intro-content" class="section-content reveal-content">
-                    <p id="intro-text-wrapper">Een meeslepende ‘true crime’ podcast die je meeneemt in de archieven 
-                    van onopgeloste verdwijningen en vergeten dossiers…
-                    <br><br>Aan de hand van oude politierapporten, originele getuigenverklaringen en interviews 
-                    met directe betrokkenen duiken misdaadjournalist Oscar Verstraeten en cold case rechercheur 
-                    Angelique Sneijders diep in deze duistere wereld van mysteries, geheimen en verborgen waarheden, 
-                    om de onderste steen boven te halen…
+
+                    <p id="intro-text-wrapper">
+                        Een meeslepende ‘true crime’ podcast die je meeneemt in de archieven 
+                        van onopgeloste verdwijningen en vergeten dossiers…
+
+                        <br><br>
+
+                        Aan de hand van oude politierapporten, originele getuigenverklaringen en interviews 
+                        met directe betrokkenen duiken misdaadjournalist Oscar Verstraeten en cold case rechercheur 
+                        Angelique Sneijders diep in deze duistere wereld van mysteries, geheimen en verborgen waarheden, 
+                        om de onderste steen boven te halen…
                     </p>
-                    
+
                     <div class="intro-video-wrapper">
-                        <video 
-                            class="intro-video" 
+                        <video
+                            class="intro-video"
                             controls
                             preload="metadata"
-                            poster="images/poster-img.png">
+                            poster="images/poster-img.png"
+                        >
                             <source src="" type="video/mp4">
-                            Je browser ondersteunt dit videoformaat niet. Probeer een andere browser of update je huidige browser.
-                        </video>             
-                    </div>
-                </div>
-            </section>
-        </section>  
-       
 
-        <section id=""stage-scene">
+                            Je browser ondersteunt dit videoformaat niet.
+                            Probeer een andere browser of update je huidige browser.
+                        </video>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </section>
+
+
+        <section id="stage-scene" class="morse-scene">
+
             <div class="section-trail">
                 <div class="line"></div>
             </div>
 
             <div class="morse-help">
+
                 <div class="morse-h">
                     <div class="dot"></div>
                     <div class="dot"></div>
                     <div class="dot"></div>
                     <div class="dot"></div>
-                </div>  
+                </div>
+
                 <div class="morse-e">
                     <div class="dot"></div>
                 </div>
+
                 <div class="morse-l">
                     <div class="dot"></div>
                     <div class="dash"></div>
                     <div class="dot"></div>
                     <div class="dot"></div>
-                </div>  
+                </div>
+
                 <div class="morse-p">
                     <div class="dot"></div>
                     <div class="dash"></div>
                     <div class="dash"></div>
                     <div class="dot"></div>
                 </div>
+
             </div>
+
             <section id="stage" class="section">
-            <!-- Prominent in beeld, groot venster voor de video. Poster voor de video is een foto van 
-            de rode pump met een duistere filter eroverheen en een fictieve titel van de aflevering-->
-            <!-- Belangrijkste sectie; hier komt de kern samen webdesign/tekst-verhaal/audio => sfeer!! -->
-            <!-- Audio fragment moet bevatten, een compilatie van fragmenten uit de podcast zelf, 
-            waarbij originele audio op de achtergrond wordt gebruikt.-->
-            <!-- Animatie, maar parallax (achtergrond, tekst, video 
-             en animatie van morse van boven naar beneden(!! onthouden!!)). 
-             Op een grauwe duistere achtergrond met ruis, komt de video helder aanwezig omhoog
-             als er gescrollt wordt. 
-             Bij geen scroll hangt de video wel in de duisternis,
-             maar het moet aanvoelen als een object in de onbekende leegte (misschien shadow/blur effect).
-             De video is een compilatie van fragmenten uit de podcast zelf, 
-             waarbij originele audio op de achtergrond wordt gebruikt.
-             Misschien citaten uit de podcast die omhoog komen zweven (parallax effect) 
-             en verdwijnen in mist => translateY + blur + fade in en out-->
-                <h2 class = "section-title stage-title">Uitgelicht Dossier</h2>
+
+                <!-- Prominent in beeld, groot venster voor de video. Poster voor de video is een foto van 
+                de rode pump met een duistere filter eroverheen en een fictieve titel van de aflevering-->
+
+                <!-- Belangrijkste sectie; hier komt de kern samen webdesign/tekst-verhaal/audio => sfeer!! -->
+
+                <!-- Audio fragment moet bevatten, een compilatie van fragmenten uit de podcast zelf, 
+                waarbij originele audio op de achtergrond wordt gebruikt.-->
+
+                <!-- Animatie, maar parallax (achtergrond, tekst, video 
+                en animatie van morse van boven naar beneden(!! onthouden!!)). 
+                Op een grauwe duistere achtergrond met ruis, komt de video helder aanwezig omhoog
+                als er gescrollt wordt. 
+                Bij geen scroll hangt de video wel in de duisternis,
+                maar het moet aanvoelen als een object in de onbekende leegte (misschien shadow/blur effect).
+                De video is een compilatie van fragmenten uit de podcast zelf, 
+                waarbij originele audio op de achtergrond wordt gebruikt.
+                Misschien citaten uit de podcast die omhoog komen zweven (parallax effect) 
+                en verdwijnen in mist => translateY + blur + fade in en out-->
+
+                <h2 class="section-title stage-title">Uitgelicht Dossier</h2>
+
                 <div class="section-content reveal-content">
-                    <p>Twintig jaar geleden stapte de 21-jarige Laura in de auto van een onbekende man. 
+
+                    <p>
+                        Twintig jaar geleden stapte de 21-jarige Laura in de auto van een onbekende man. 
                         Haar familie en vrienden hebben sindsdien geen enkel teken van leven meer ontvangen. 
                         In dit dossier duiken we diep in de zaak, onderzoeken we de omstandigheden rondom haar verdwijning en 
-                        proberen we de waarheid te achterhalen.            
+                        proberen we de waarheid te achterhalen.
                     </p>
-                </div>
-            </section>
-        </section>  
 
-        <section id="archives" class="section"> 
-             <!--Een kort overzicht van dossiers, elk dossier een episode, doemen net als de Hero
-             op uit de duisternis(?)na elkaar — slechts één keer en blijven dan zichtbaar -->
-             <!--Elk dossier is een apart item, werkt als een knop waar inleidende tekst op wordt 
-             weergegeven + titel + thumbnail-->
-             <!--Elke knop leidt naar: CTA luister nu via Spotify, etc.-->
-            <h2 class="section-title ">Het Archief</h2>
-            <div class="section-content reveal-content">
-                <img src="images/archive_image.png" alt="Archief afbeelding" class="archive-image">
-                <p>Beluister hier onze eerder uitgegeven dossiers. 
-                </p>
-                <section class="archive-item">
-                    <h3 class="title-archive-item">Dossier 1: De Verdwijning van Anna</h3>
-                    <p class="date-archive-item">Datum van publicatie: 15 juli 2025</p>
-                    <p class="description-archive-item">In de zomer van 1985 speelde Anna, een tienermeisje uit een klein dorpje, op het schoolplein, toen een onbekende vrouw haar aansprak. Momenten daarna was het meisje in geen velden of wegen meer te bekennen...</p>
-                </section>
-                <section class="archive-item">
-                    <h3 class="title-archive-item">Dossier 2: Alibi's in het Bos</h3>
-                    <p class="date-archive-item">Datum van publicatie: 01 juli 2025</p>
-                    <p class="description-archive-item">Op 25 juli 2019 werd de tech-magnaat Albert Prins op zijn kantoor bezocht door twee onbekende mannen. Dezelfde dag werd hij als vermist opgegeven toen hij niet thuis was gekomen... </p> 
-                </section>
-                <section class="archive-item">
-                    <h3 class="title-archive-item">Dossier 3: Het Mysterie van het Verdwenen Gezin</h3>
-                    <p class="date-archive-item">Datum van publicatie: 17 juni 2025</p>
-                    <p class="description-archive-item">Op 15 maart 2005 was Jan Klaver met zijn gezin op het vliegtuig gestapt om hun langgekoesterde wereldreis te starten vanaf New Delhi. Het gezin is nooit in het hotel aangekomen...</p>
-                </section>
-            </div>
+                </div>
+
+            </section>
+
         </section>
+
+
+        <section id="archives" class="section">
+
+            <!--Een kort overzicht van dossiers, elk dossier een episode, doemen net als de Hero
+            op uit de duisternis(?)na elkaar — slechts één keer en blijven dan zichtbaar -->
+
+            <!--Elk dossier is een apart item, werkt als een knop waar inleidende tekst op wordt 
+            weergegeven + titel + thumbnail-->
+
+            <!--Elke knop leidt naar: CTA luister nu via Spotify, etc.-->
+
+            <h2 class="section-title">Het Archief</h2>
+
+            <div class="section-content reveal-content">
+
+                <img
+                    src="images/archive_image.png"
+                    alt="Archief afbeelding"
+                    class="archive-image"
+                >
+
+                <p>
+                    Beluister hier onze eerder uitgegeven dossiers.
+                </p>
+
+                <section class="archive-item">
+
+                    <h3 class="title-archive-item">
+                        Dossier 1: De Verdwijning van Anna
+                    </h3>
+
+                    <p class="date-archive-item">
+                        Datum van publicatie: 15 juli 2025
+                    </p>
+
+                    <p class="description-archive-item">
+                        In de zomer van 1985 speelde Anna, een tienermeisje uit een klein dorpje,
+                        op het schoolplein, toen een onbekende vrouw haar aansprak.
+                        Momenten daarna was het meisje in geen velden of wegen meer te bekennen...
+                    </p>
+
+                </section>
+
+                <section class="archive-item">
+
+                    <h3 class="title-archive-item">
+                        Dossier 2: Alibi's in het Bos
+                    </h3>
+
+                    <p class="date-archive-item">
+                        Datum van publicatie: 01 juli 2025
+                    </p>
+
+                    <p class="description-archive-item">
+                        Op 25 juli 2019 werd de tech-magnaat Albert Prins op zijn kantoor bezocht
+                        door twee onbekende mannen. Dezelfde dag werd hij als vermist opgegeven
+                        toen hij niet thuis was gekomen...
+                    </p>
+
+                </section>
+
+                <section class="archive-item">
+
+                    <h3 class="title-archive-item">
+                        Dossier 3: Het Mysterie van het Verdwenen Gezin
+                    </h3>
+
+                    <p class="date-archive-item">
+                        Datum van publicatie: 17 juni 2025
+                    </p>
+
+                    <p class="description-archive-item">
+                        Op 15 maart 2005 was Jan Klaver met zijn gezin op het vliegtuig gestapt
+                        om hun langgekoesterde wereldreis te starten vanaf New Delhi.
+                        Het gezin is nooit in het hotel aangekomen...
+                    </p>
+
+                </section>
+
+            </div>
+
+        </section>
+
 
         <section id="cta" class="section">
+
             <!-- CTA: Beluister nu, met een knop die naar Spotify, Apple Podcasts, etc. leidt. -->
             <!-- Toch nog even goed over nadenken, niet helemaal in lijn met detectivebureau gevoel...?-->
+
             <!-- De animatie van morse van boven naar beneden(!! onthouden!!)) komt hier terug, 
-             van boven, alsof het de bezoeker hierheen wilde leiden-->
-            <h2 class="section-title ">Beluister nu</h2>   
+            van boven, alsof het de bezoeker hierheen wilde leiden-->
+
+            <h2 class="section-title">Beluister nu</h2>
+
             <div class="section-content reveal-content">
-                <p>Klaar om de diepte in te duiken? Luister nu op Spotify, Apple Podcasts of je favoriete platform.</p>
+
+                <p>
+                    Klaar om de diepte in te duiken?
+                    Luister nu op Spotify, Apple Podcasts of je favoriete platform.
+                </p>
+
             </div>
+
         </section>
+
     </main>
+
     <footer>
         <p>&copy; 2023 Dark Files. All rights reserved.</p>
     </footer>
-            
+
 </body>
 </html>
