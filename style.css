@@ -90,7 +90,7 @@ a {
 }
 
 .project-disclaimer {
-    position: fixed;
+    /*position: fixed;*/
     right: 1.5rem;
     bottom: 1.25rem;
 
@@ -333,22 +333,7 @@ main > section {
 
     color: var(--color-text);
     text-decoration: none;
-}
 
-.hero-scroll-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-}
-
-.hero-scroll-line {
-    width: 1px;
-    height: 2.5rem;
-    background-color: var(--color-text);
-    opacity: 0.6;
-}
-
-.hero-scroll {
     position: absolute;
 
     left: clamp(1.5rem, 5vw, 5rem);
@@ -360,17 +345,47 @@ main > section {
         reveal-cta 0.8s ease-out 2.8s forwards;
 }
 
+.hero-scroll-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    text-align: left;
+}
+
+.hero-scroll-line {
+    width: 1px;
+    height: 2.5rem;
+    background-color: var(--color-text);
+    opacity: 0.6;
+}
+
 .hero-scroll-text-primary {
-    font-family: 'Courier Prime', monospace;
+    /*font-family: 'Courier Prime', monospace;*/
     /*font-size: 1.2rem;*/
     font-weight: 400;
 }
 
 .hero-scroll-text-secondary {
-    font-family: 'Courier Prime', monospace;
+    /*font-family: 'Courier Prime', monospace;*/
     /*font-size: 0.8rem;*/
     font-weight: 200;
-    letter-spacing: 0.08em;
+    /*letter-spacing: 0.08em;*/
+    opacity: 0.6;
+}
+
+.hero-scroll-text-primary,
+.hero-scroll-text-secondary {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.hero-scroll-arrow {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    margin-top: 1.5rem;
+
+    animation:
+        scroll-arrow 1s ease-in-out infinite;
 }
 
 /*
